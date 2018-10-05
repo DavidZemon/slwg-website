@@ -1,0 +1,8 @@
+<li class="nav-item dropdown" ngbDropdown>
+  <a class="nav-link dropdown-toggle" ngbDropdownToggle id="{{name}}DropDown" role="button"
+     aria-haspopup="true" aria-expanded="false">{{name}}</a>
+
+  <div class="dropdown-menu" ngbDropdownMenu attr.aria-labelledby="{{name}}Dropdown">
+    <a *ngFor="let sub of subs" class="dropdown-item" href="{{sub.link}}">{{sub.title}}</a>
+  </div>
+</li>

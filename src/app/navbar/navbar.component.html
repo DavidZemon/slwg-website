@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">SLWG</a>
+  <a class="navbar-brand" href="/">SLWG</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,20 +8,68 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
 
-      <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" ngbDropdownToggle href="#" id="aboutDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false">About</a>
+      <slwg-navbar-dropdown name="About" [subs]="[
+        {
+          link: 'about',
+          title: 'About SLWG'
+        },
+        {
+          link: '',
+          title: 'Contact Us'
+        }
+      ]"></slwg-navbar-dropdown>
 
-        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="aboutDropdown">
-          <a class="dropdown-item" href="#about">About SLWG</a>
+      <slwg-navbar-dropdown name="Resources" [subs]="[
+        {
+          link: '',
+          title: 'Announcements'
+        },
+        {
+          link: '',
+          title: 'Event Calendar'
+        },
+        {
+          link: '',
+          title: 'Guild Library'
+        },
+        {
+          link: '',
+          title: 'Tool Recalls'
+        }
+      ]"></slwg-navbar-dropdown>
 
-          <a class="dropdown-item" href="#contact">Contact Us</a>
-        </div>
-      </li>
-
-      <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+      <slwg-navbar-dropdown name="Links" [subs]="[
+        {
+          link: '',
+          title: 'Corporations'
+        },
+        {
+          link: '',
+          title: 'Guilds and Clubs'
+        },
+        {
+          link: '',
+          title: 'Info Sources'
+        },
+        {
+          link: '',
+          title: 'Nearby Professionals'
+        },
+        {
+          link: '',
+          title: 'Kits/Supplies'
+        },
+        {
+          link: '',
+          title: 'Sponsors'
+        },
+        {
+          link: '',
+          title: 'Members\' Websites'
+        }
+      ]"></slwg-navbar-dropdown>
 
       <li class="nav-item"><a class="nav-link" href="#">Newsletter</a></li>
 
@@ -31,9 +79,31 @@
 
       <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
 
-      <li class="nav-item"><a class="nav-link" href="#">Galleries</a></li>
+      <slwg-navbar-dropdown name="Galleries" [subs]="[
+        {
+          link: '',
+          title: 'Member Galleries'
+        },
+        {
+          link: '',
+          title: 'Guild Events'
+        }
+      ]"></slwg-navbar-dropdown>
 
-      <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+      <slwg-navbar-dropdown name="Members" [subs]="[
+        {
+          link: '',
+          title: 'Forum'
+        },
+        {
+          link: '',
+          title: 'Websites/Services'
+        },
+        {
+          link: '',
+          title: 'Private Site'
+        }
+      ]"></slwg-navbar-dropdown>
 
       <li class="nav-item"><a class="nav-link" href="#">Sponsors</a></li>
     </ul>
