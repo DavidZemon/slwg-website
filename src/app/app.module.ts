@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -27,6 +28,7 @@ import {AnnouncementsComponent} from './announcements/announcements.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

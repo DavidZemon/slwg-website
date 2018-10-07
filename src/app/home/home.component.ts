@@ -1,10 +1,72 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'slwg-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+  imageUrls = [
+    'assets/rolling-slideshow/101_0011.jpg',
+    'assets/rolling-slideshow/aa_twitchell1.jpg',
+    'assets/rolling-slideshow/Asnyder_joineryb.jpg',
+    'assets/rolling-slideshow/ASPalmer-1-Z.jpg',
+    'assets/rolling-slideshow/B_B_Cardinal.jpg',
+    'assets/rolling-slideshow/b_koritz2.jpg',
+    'assets/rolling-slideshow/barbie_box.jpg',
+    'assets/rolling-slideshow/barrbox_1.jpg',
+    'assets/rolling-slideshow/Basket_Tulip.jpg',
+    'assets/rolling-slideshow/Boxelder_Stormy5.jpg',
+    'assets/rolling-slideshow/boxes2.jpg',
+    'assets/rolling-slideshow/brown_vessell.jpg',
+    'assets/rolling-slideshow/BSPalmer-3-Z.jpg',
+    'assets/rolling-slideshow/Candy_Basket.jpg',
+    'assets/rolling-slideshow/Cherry_and_Curly_Walnut_9-drawer_and_6-drawerTowers2.jpg',
+    'assets/rolling-slideshow/clock.jpg',
+    'assets/rolling-slideshow/colegate_oakbox.jpg',
+    'assets/rolling-slideshow/Curly_Maple_3-drawer_small.jpg',
+    'assets/rolling-slideshow/Cut_flower_holder_mahogany_small.jpg',
+    'assets/rolling-slideshow/Deer.jpg',
+    'assets/rolling-slideshow/DSC_8547_1.jpg',
+    'assets/rolling-slideshow/ellis_chessboard.jpg',
+    'assets/rolling-slideshow/ellis_handplane.jpg',
+    'assets/rolling-slideshow/Floating_top_curly_maple_table_small.jpg',
+    'assets/rolling-slideshow/Fretwork_Clock.jpg',
+    'assets/rolling-slideshow/HammeredDulcimer.jpg',
+    'assets/rolling-slideshow/hobson_settee.jpg',
+    'assets/rolling-slideshow/HPIM0313_1_0135_135.jpg',
+    'assets/rolling-slideshow/img002.jpg',
+    'assets/rolling-slideshow/img003.jpg',
+    'assets/rolling-slideshow/img008.jpg',
+    'assets/rolling-slideshow/img010.jpg',
+    'assets/rolling-slideshow/img013.jpg',
+    'assets/rolling-slideshow/koritz3.jpg',
+    'assets/rolling-slideshow/lingerie.jpg',
+    'assets/rolling-slideshow/Lsnyder_jewelery.jpg',
+    'assets/rolling-slideshow/m1.jpg',
+    'assets/rolling-slideshow/Mahogany_and_Leopardwood_Tower_small.jpg',
+    'assets/rolling-slideshow/Maloof1.jpg',
+    'assets/rolling-slideshow/Maloof2.jpg',
+    'assets/rolling-slideshow/Maple_Knife_Chest_2_small.jpg',
+    'assets/rolling-slideshow/MAQCSPalmer_20_SM.jpg',
+    'assets/rolling-slideshow/Mini_Basket.jpg',
+    'assets/rolling-slideshow/neclace_chest1.jpg',
+    'assets/rolling-slideshow/NSPalmer-2-Z.jpg',
+    'assets/rolling-slideshow/olson_table.jpg',
+    'assets/rolling-slideshow/PaintedCoffeeTable.jpg',
+    'assets/rolling-slideshow/Palm_Lamp.jpg',
+    'assets/rolling-slideshow/s_plant_stand.jpg',
+    'assets/rolling-slideshow/s_ski_jump_box.jpg',
+    'assets/rolling-slideshow/snyder_bed.jpg',
+    'assets/rolling-slideshow/SPalmer-4-Z.jpg',
+    'assets/rolling-slideshow/SPalmer_22_SM.jpg',
+    'assets/rolling-slideshow/SPalmer_33_SM.jpg',
+    'assets/rolling-slideshow/stool2.jpg',
+    'assets/rolling-slideshow/t_mulechest.jpg',
+    'assets/rolling-slideshow/twichell3.jpg',
+    'assets/rolling-slideshow/Walnut_cherry_6-drawer_tower_right_small.jpg',
+    'assets/rolling-slideshow/Watch.jpg'
+  ];
+
   ngOnInit() {
   }
 }
