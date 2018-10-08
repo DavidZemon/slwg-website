@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "~angular-calendar/css/angular-calendar.css";
+
+header {
+  padding-bottom: 1em;
+}
+
+footer {
+  padding-top: 1em;
+}
 
 .navbar-light {
   background-color: #e3f2fd;
@@ -7,4 +16,8 @@
 
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.8);
+}
+
+iframe {
+  border: 0
 }
