@@ -5,6 +5,7 @@ import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 import {AnnouncementsComponent} from './announcements/announcements.component';
 import {CalendarComponent} from './calendar/calendar.component';
+import {LibraryComponent} from './library/library.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'calendar',
     component: CalendarComponent
+  },
+  {
+    path: 'library',
+    component: LibraryComponent
   }
 ];
 

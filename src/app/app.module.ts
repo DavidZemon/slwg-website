@@ -15,6 +15,7 @@ import {ContactComponent} from './contact/contact.component';
 import {OfficerInfoComponent} from './officer-info/officer-info.component';
 import {AnnouncementsComponent} from './announcements/announcements.component';
 import {CalendarComponent} from './calendar/calendar.component';
+import { LibraryComponent } from './library/library.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {CalendarComponent} from './calendar/calendar.component';
     ContactComponent,
     OfficerInfoComponent,
     AnnouncementsComponent,
-    CalendarComponent
+    CalendarComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,
