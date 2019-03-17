@@ -9,104 +9,18 @@
 
   <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+      <li class="nav-item" *ngFor="let item of navbarContent" [class.dropdown]="!item.hasOwnProperty('subs')">
+        <a *ngIf="!item.hasOwnProperty('subs')" class="nav-link" [href]="item['href']">{{item.title}}</a>
 
-      <slwg-navbar-dropdown name="About" [subs]="[
-        {
-          link: 'about',
-          title: 'About SLWG'
-        },
-        {
-          link: 'contact',
-          title: 'Contact Us'
-        }
-      ]"></slwg-navbar-dropdown>
+        <div *ngIf="item.hasOwnProperty('subs')" ngbDropdown>
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle id="{{item['title']}}DropDown" role="button"
+             aria-haspopup="true" aria-expanded="false">{{item['title']}}</a>
 
-      <slwg-navbar-dropdown name="Resources" [subs]="[
-        {
-          link: 'announcements',
-          title: 'Announcements'
-        },
-        {
-          link: 'calendar',
-          title: 'Event Calendar'
-        },
-        {
-          link: 'library',
-          title: 'Guild Library'
-        },
-        {
-          link: 'recalls',
-          title: 'Tool Recalls'
-        }
-      ]"></slwg-navbar-dropdown>
-
-      <slwg-navbar-dropdown name="Links" [subs]="[
-        {
-          link: 'corporations',
-          title: 'Corporations'
-        },
-        {
-          link: 'guilds-clubs',
-          title: 'Guilds and Clubs'
-        },
-        {
-          link: 'sources',
-          title: 'Info Sources'
-        },
-        {
-          link: 'professionals',
-          title: 'Nearby Professionals'
-        },
-        {
-          link: 'supplies',
-          title: 'Kits/Supplies'
-        },
-        {
-          link: 'sponsors',
-          title: 'Sponsors'
-        },
-        {
-          link: 'member-websites',
-          title: 'Members\' Websites'
-        }
-      ]"></slwg-navbar-dropdown>
-
-      <li class="nav-item"><a class="nav-link" href="newsletter">Newsletter</a></li>
-
-      <li class="nav-item"><a class="nav-link" href="member-benefits">Member Benefits</a></li>
-
-      <li class="nav-item"><a class="nav-link" href="meetings">Meetings</a></li>
-
-      <li class="nav-item"><a class="nav-link" href="community">Community</a></li>
-
-      <slwg-navbar-dropdown name="Galleries" [subs]="[
-        {
-          link: 'galleries',
-          title: 'Member Galleries'
-        },
-        {
-          link: 'events',
-          title: 'Guild Events'
-        }
-      ]"></slwg-navbar-dropdown>
-
-      <slwg-navbar-dropdown name="Members" [subs]="[
-        {
-          link: 'https://groups.google.com/forum/?hl=en#!forum/st-louis-woodworkers-guild',
-          title: 'Forum'
-        },
-        {
-          link: 'services',
-          title: 'Websites/Services'
-        },
-        {
-          link: 'private-site',
-          title: 'Private Site'
-        }
-      ]"></slwg-navbar-dropdown>
-
-      <li class="nav-item"><a class="nav-link" href="sponsors">Sponsors</a></li>
+          <div class="dropdown-menu" ngbDropdownMenu attr.aria-labelledby="{{item['title']}}Dropdown">
+            <a *ngFor="let sub of item['subs']" class="dropdown-item" [href]="sub.href">{{sub.title}}</a>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
 </nav>
